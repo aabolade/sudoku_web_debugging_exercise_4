@@ -65,6 +65,12 @@ class SudokuWeb < Sinatra::Base
     redirect to('/')
   end
 
+  get '/hard' do
+    generate_new_game
+    cells_criteria
+    erb :home
+  end
+
   get '/' do
     generate_new_game
     cells_criteria

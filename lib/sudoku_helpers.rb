@@ -14,7 +14,7 @@ module SudokuHelpers
     values_array.map {|x| x == "" ? "0" : x}.join
   end
 
-  def problem_solved?(user_sudoku, original_puzzle)    
+  def problem_solved?(user_sudoku, original_puzzle)
     sudoku_puzzle = Sudoku.new(original_puzzle)
     sudoku_puzzle.solve!
     sudoku_puzzle.to_s == user_sudoku
@@ -49,4 +49,3 @@ module SudokuHelpers
   end
 
 end
-
